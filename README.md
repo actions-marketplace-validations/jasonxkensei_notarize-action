@@ -1,3 +1,4 @@
+````
 # xProof Certify — GitHub Action
 
 > **Every build you ship without proof is a build anyone can claim.**
@@ -22,7 +23,7 @@ jobs:
         run: npm run build && zip -r build.zip dist/
 
       - name: Certify with xProof
-        uses: xproof-app/certify-action@v1
+        uses: jasonxkensei/xProof-Action@v1
         with:
           api_key: ${{ secrets.XPROOF_API_KEY }}
           files: 'build.zip'
@@ -53,7 +54,7 @@ jobs:
 
 ```yaml
 - name: Certify
-  uses: xproof-app/certify-action@v1
+  uses: jasonxkensei/xProof-Action@v1
   with:
     api_key: ${{ secrets.XPROOF_API_KEY }}
     files: 'release.tar.gz'
@@ -64,7 +65,7 @@ jobs:
 ```yaml
 - name: Certify
   id: certify
-  uses: xproof-app/certify-action@v1
+  uses: jasonxkensei/xProof-Action@v1
   with:
     api_key: ${{ secrets.XPROOF_API_KEY }}
     files: 'build.zip package.json contracts/main.sol'
@@ -79,7 +80,7 @@ jobs:
 ```yaml
 - name: Certify
   id: certify
-  uses: xproof-app/certify-action@v1
+  uses: jasonxkensei/xProof-Action@v1
   with:
     api_key: ${{ secrets.XPROOF_API_KEY }}
     files: 'build.zip'
@@ -103,16 +104,16 @@ The attestation JSON contains full provenance data:
     "ref": "refs/heads/main",
     "run_id": "123456789"
   },
-  "artifacts": [
-    {
-      "filename": "build.zip",
-      "sha256": "a1b2c3d4...",
-      "proof_id": "uuid-here",
-      "verify_url": "https://xproof.app/proof/uuid-here",
-      "badge_url": "https://xproof.app/badge/uuid-here",
-      "tx_hash": "abc123...",
-      "explorer_url": "https://explorer.multiversx.com/transactions/abc123..."
-    }
+  "artifacts": [\
+    {\
+      "filename": "build.zip",\
+      "sha256": "a1b2c3d4...",\
+      "proof_id": "uuid-here",\
+      "verify_url": "https://xproof.app/proof/uuid-here",\
+      "badge_url": "https://xproof.app/badge/uuid-here",\
+      "tx_hash": "abc123...",\
+      "explorer_url": "https://explorer.multiversx.com/transactions/abc123..."\
+    }\
   ]
 }
 ```
@@ -137,3 +138,4 @@ The attestation JSON contains full provenance data:
 ## License
 
 All Rights Reserved. See [xproof.app](https://xproof.app) for terms.
+````
