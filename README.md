@@ -131,7 +131,7 @@ The attestation JSON contains full provenance data:
 3. xProof anchors the hash on MultiversX blockchain
 4. Returns verification URLs, badges, and a JSON attestation file
 
-**Cost:** Starting at $0.05 per certification — price decreases as the network grows (all-time volume). Current pricing: https://xproof.app/api/pricing
+**Cost:** $0.01 per certification — flat rate, no tiers. Current pricing: https://xproof.app/api/pricing
 
 **Get an API key:** Visit [xproof.app](https://xproof.app) and connect your wallet.
 
